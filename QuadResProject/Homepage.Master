@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Homepage.master.cs" Inherits="QuadResProject.Homepage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Home</title>
+    <!-- Latest compiled and minified CSS -->
+    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>--%>
+    <link href="Bootstrap/css/4.3.1boostrap.css" rel="stylesheet" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>--%>
+    <link rel="stylesheet" type="text" href="bootstrap/css/bootstrap_ceruline.css" />
+    <%--<link rel="stylesheet" type="text/css" href="Bootstrap/js/bootstrap.js" />--%>
+    <link rel="stylesheet" type="text/css" href="Homepage.css" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+    <meta name="generator" content="Jekyll v3.8.5" />
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <style type="text/css">
+        .auto-style5 {
+            padding-top: 15px;
+            color:white;
+            background-color:skyblue;
+                padding-top: 20px;
+    padding-bottom: 25px;
+        } 
+        
+
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info;" style="background-color:skyblue"> 
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/qrlogo.png" ImageAlign="Middle" Width="300px" Height="50px" CssClass="auto-style8" />
+            <%--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>--%>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item active">
+                        <%if (Session["UserName"] == null)
+                            {
+                                Button3.Visible = true;
+                                Button2.Visible = true;
+
+                            }
+                            else
+                            {
+                                //if (Session["UserName"] != null && Session["Sign Out"] != null)
+                                //{
+                                //    Button3.Visible = false;
+                                //    Button2.Visible = false;
+
+                                //}
+                                if (Session["UserName"] != null && Session["Sign Out"] == null)
+                                {
+                                    //Button2.Text = Session["UserName"].ToString();
+                                    Button3.Visible = false;
+                                    Button2.Visible = false;
+                                    
+
+                                }
+                            }%>
+  
+                    </li>
+                </ul>
+            </div>
+             <asp:Button ID="Button3" runat="server" CssClass="btn btn-link" Font-Bold="true" Text="Register" ForeColor="White" OnClick="Button3_Click" />
+             <span style="width: 5px"></span> 
+            <asp:Button ID="Button2" runat="server" CssClass="btn btn-link" Font-Bold="true" Text="Sign In" ForeColor="White"  OnClick="Button2_Click" />                        
+            
+
+            <div class="dropdown">
+      <button class="dropbtn">Select</button>
+      <div class="dropdown-content">
+      <a href="WorkItems.aspx">Work Items</a>
+      <a href="MyProfile.aspx">MyProfile</a>
+      <a href="LogOut.aspx">LogOut</a>
+  </div>
+</div>
+        </nav>
+        <div class="auto-style6">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+         </asp:ContentPlaceHolder>
+            </div>
+            <div class="col-md-5">
+            </div>
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="auto-style5">
+            <p><b>&copy; All rights reserved by <a href="Home.aspx" style="color:white">Quadrant Resource </a></b></p>
+        </div>
+    </footer>
+</body>
+</html>

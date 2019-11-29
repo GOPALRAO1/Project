@@ -1,0 +1,140 @@
+﻿.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.Body {
+    margin: 0px;
+    padding: 0px;
+
+    background-repeat: no-repeat;
+}
+
+/*::-webkit-scrollbar {
+    display: none;
+}*/
+
+.img-responsive {
+    image-resolution: from-image;
+}
+/*--------------registration css---------------------*/
+.auto-style1 {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    transition: none;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+}
+
+.Header {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.Header_div {
+    width: 1000px;
+    margin: auto;
+}
+
+.Header_Logo {
+    font-size: 75px;
+    text-shadow: 1px 2px 3px #aaa;
+    /*float:left;*/
+    text-align: right;
+}
+
+label.error {
+    color: red;
+    display: inline-flex;
+}
+
+#Label4 {
+    color: green;
+    align-content: center;
+}
+
+#Label5 {
+    color: red;
+    align-content: center;
+}
+ 
+
+.txt-aln-ctr {
+    text-align: center;
+}
+
+.wdt-100 {
+    width: 100%;
+}
+/* The dropdown container */
+.dropbtn {
+    background-color: #337ab7;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight:700;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+
+
+    .dropdown-content a {
+        color: black;
+        padding: 5px 5px;
+        text-decoration: none;
+        display: block;
+    }
+
+
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.57);
+}
+.UsrTime {
+    padding-right: 100px;
+}
